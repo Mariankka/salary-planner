@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salary Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f6f8;
+      padding: 20px;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: auto;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>💰 Salary Planner</h1>
+    <input type="number" id="salary" placeholder="Введи зарплату">
+    <button onclick="calculate()">Розрахувати</button>
+    <h2 id="result"></h2>
+  </div>
+
+  <script>
+    function calculate() {
+      var salary = document.getElementById("salary").value;
+      var savings = salary * 0.2;
+      var spending = salary * 0.8;
+      document.getElementById("result").innerHTML =
+        "Заощадження: " + savings + " грн<br>Витрати: " + spending + " грн";
+    }
+  </script>
+</body>
+</html>
